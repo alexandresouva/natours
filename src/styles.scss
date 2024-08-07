@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import "./app/shared/styles/colors";
+@import "./app/shared/styles/variables";
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,18 +14,9 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: $default-font-family;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
 }
-
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
