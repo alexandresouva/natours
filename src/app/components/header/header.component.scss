@@ -42,65 +42,14 @@
   }
 
   &--sub {
-    @include heading-style(2rem, 700, 1.74rem);
+    @include heading-style(2rem, 700, 1.75rem);
     animation: moveToLeft 1s ease-out;
   }
 }
 
-// TODO: Move this parte to a separate file
 .btn {
-  // States
-  &:link,
-  &:visited {
-    position: relative;
-    display: inline-block;
-    padding: 1.5rem 4rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 10rem;
-
-    transition: all 0.2s;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-
-    &::after {
-      transform: scaleX(1.4) scaleY(1.5);
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
-  }
-
-  // Colors
-  &--white {
-    background-color: #fff;
-    color: #777;
-
-    &::after {
-      background-color: #fff;
-    }
-  }
-
-  &--animation {
+  @include default-button-style();
+  &--reload-animation {
     animation: moveToBottom 0.5s ease-out 0.5s;
     animation-fill-mode: backwards;
   }
