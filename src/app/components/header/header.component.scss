@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 98vh;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -13,7 +13,7 @@
     url(/images/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 100%);
 
   &__logo {
     position: absolute;
@@ -31,22 +31,7 @@
   }
 }
 
-.heading {
-  color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-
-  &--main {
-    @include heading-style(6rem, 400, 3.5rem);
-    animation: moveToRight 1s ease-out;
-  }
-
-  &--sub {
-    @include heading-style(2rem, 700, 1.75rem);
-    animation: moveToLeft 1s ease-out;
-  }
-}
-
+// TODO: MOVE TO A SEPARATE FILE
 .btn {
   @include default-button-style();
   &--reload-animation {
