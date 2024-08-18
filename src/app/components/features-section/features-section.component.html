@@ -1,0 +1,9 @@
+<section class="features">
+  <ul class="features__list container">
+    @for (feature of features; track $index) {
+    <app-feature-card [feature]="feature"></app-feature-card>
+    } @empty {
+    <li>Nenhuma feature foi encontrada.</li>
+    }
+  </ul>
+</section>

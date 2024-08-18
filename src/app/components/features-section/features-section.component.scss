@@ -1,0 +1,25 @@
+@import "colors";
+
+.features {
+  padding: 22rem 5rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(/images/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-5deg);
+  margin-top: -7rem;
+
+  & > * {
+    transform: skewY(5deg);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6rem;
+    align-items: start;
+  }
+}
